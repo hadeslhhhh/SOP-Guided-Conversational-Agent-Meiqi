@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT))
 from app.interpreter import normalize_requested_fields
 SOURCE = ROOT / "tests" / "complex_30_customer_conversions.txt"
 OUTPUT = ROOT / "tests" / "complex_30_api_conversion_results.txt"
-JSONL_SOURCE = ROOT.parent / "tests" / "generated_sop_harness_30_customers.jsonl"
+JSONL_SOURCE = ROOT / "tests" / "generated_sop_harness_30_customers.jsonl"
 
 
 def load_cases():
@@ -254,7 +254,7 @@ def main():
         wanted = {value.upper() if value.upper().startswith("C") else f"C{value}" for value in args.ids}
         cases = [item for item in cases if item[0].upper() in wanted]
     cases = cases[:args.limit]
-    output = (ROOT.parent / "tests" / "generated_sop_harness_30_conversion.txt" if args.source == "sop-jsonl" else OUTPUT)
+    output = (ROOT / "tests" / "generated_sop_harness_30_conversion.txt" if args.source == "sop-jsonl" else OUTPUT)
     service = ConversationService()
     conversation_report = ["COMPLEX 30 API-ONLY CONVERSATIONS", "=" * 42, ""]
     diagnostics_report = ["INTERMEDIATE STATE, NLU, AND ASSERTION DETAILS", "=" * 42, ""]

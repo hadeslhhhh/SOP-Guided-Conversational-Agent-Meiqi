@@ -6,8 +6,7 @@ import time
 import uuid
 from pathlib import Path
 
-CANONICAL = Path(__file__).resolve().parents[1]
-PROJECT = Path(__file__).resolve().parents[2]
+PROJECT = Path(__file__).resolve().parents[1]
 SOURCE = PROJECT / "tests" / "generated_sop_harness_30_customers.jsonl"
 OUTPUT = PROJECT / "tests" / "generated_sop_harness_30_conversion.txt"
 
@@ -18,7 +17,7 @@ def main():
     if os.getenv("NLU_MODE", "openai").lower() != "openai":
         raise SystemExit("Set NLU_MODE=openai; local fallback is not allowed")
     # Import only the canonical implementation in this project directory.
-    sys.path.insert(0, str(CANONICAL))
+    sys.path.insert(0, str(PROJECT))
     from app.workflow import ConversationService
     from app.models import Session
 

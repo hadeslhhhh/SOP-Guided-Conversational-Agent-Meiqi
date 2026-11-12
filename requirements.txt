@@ -1,4 +1,7 @@
-langchain-core>=0.3.0
-langgraph>=0.2.0
-openai>=1.0.0
-pytest>=8.0.0
+# Runtime dependencies for SOP-Guided-Conversational-Agent-Meiqi.
+# Transitive dependencies are resolved by pip from these direct requirements.
+fastapi==0.143.0
+uvicorn==0.54.0
+openai==2.54.0
+pydantic==2.14.0
+langgraph==1.2.20

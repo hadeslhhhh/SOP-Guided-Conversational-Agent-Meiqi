@@ -181,7 +181,7 @@ Endpoints:
 - Claim details are not disclosed before identity verification.
 - A claim must belong to the verified policyholder.
 - Claim IDs, amounts, dates, and document requirements must come from authorized facts or fixtures.
-- “Yes, email the instructions” is treated as explicit email consent, not as a missing-document question.
+- “Yes, email the conversation summary” is treated as explicit email consent, not as a missing-document question.
 - Email is currently a demo outbox operation; the agent must not claim that an external email was delivered.
 - OpenAI failures are reported explicitly; the service does not silently switch to local NLU.
 
@@ -203,4 +203,4 @@ SOP-Guided-Conversational-Agent-Meiqi/
 
 ## Cleanup policy
 
-The Docker image copies only the canonical application, fixtures, and required dependencies. It excludes `.venv`, `.env`, `__pycache__`, generated reports, sessions, and legacy root-level code. Legacy source files remain only for historical reference.
+The Docker image copies only the application, fixtures, and required dependencies. It excludes `.venv`, `.env`, `__pycache__`, generated reports, and sessions.
