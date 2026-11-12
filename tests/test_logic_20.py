@@ -156,3 +156,4 @@ def test_25_invalid_placeholder_requested_field_is_dropped():
 
 def test_26_obvious_out_of_scope_request_is_detected():
     assert is_obvious_out_of_scope("Can you recommend a movie?") is True
+    assert is_obvious_out_of_scope("Can you explain what RL is?") is True
