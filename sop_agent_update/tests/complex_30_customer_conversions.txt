@@ -1,0 +1,224 @@
+COMPLEX 30-CUSTOMER CONVERSION TEST SET
+========================================
+Execution mode: OpenAI Structured NLU API only. Local NLU is forbidden.
+Use tools/run_complex_30_api.py to run; it prints [case/total] and turn
+progress and writes complex_30_api_conversion_results.txt.
+
+Purpose: stress-test pre-verification intent capture, claim routing, multi-intent
+follow-up, emotional context, unrelated questions, and repeated acknowledgments.
+
+Distribution
+------------
+- 15 business-question customers: C01-C15
+- 10 emotional customers: C16-C25
+- 5 unrelated-question customers: C26-C30
+- Multi-question/follow-up cases: C02, C04, C07, C11, C14, C18, C21, C24
+- Repeated "OK" customer: C25
+
+C01 | business | Margaret Chen | documents before verification
+USER: My name is Margaret Chen, DOB 1985-03-15, SSN last four 4472. What documents are missing?
+BOT: Identity verified; multiple claims found. Please provide claim ID, month, type, or status.
+USER: CL-2048
+BOT: Missing documents: pathology report, office note.
+USER: Can I submit them by email?
+EXPECTED: documents -> submission; claim=CL-2048
+
+C02 | business | Margaret Chen | multi-question follow-up
+USER: I am Margaret Chen, born 1985-03-15, SSN 4472. Why was this denied, what is the appeal deadline, and what should I do next?
+USER: CL-2048
+USER: First explain the denial, then tell me the deadline.
+USER: Also, does the office note count as a required document?
+EXPECTED: denial_details + appeal + documents; preserve topic order and context.
+
+C03 | business | Margaret Chen | claim switch
+USER: Margaret Chen, 1985-03-15, SSN 4472. I need the status of my claim.
+USER: CL-2048
+USER: Can I check another claim?
+USER: 1
+EXPECTED: status on CL-2048; switch to CL-2055; status context follows new claim.
+
+C04 | business | Ya Wen Li | payment + deadline follow-up
+USER: This is Ya Wen Li, DOB 1989-12-03, ID last four 5317. How much will I receive and when?
+USER: CL-1899
+USER: Does “when” mean the payment date or the claim review date?
+USER: I mean the payment date.
+EXPECTED: payment; clarification preserves payment context; claim=CL-1899.
+
+C05 | business | Ya Wen Li | document format
+USER: Ya Wen Li, born 1989-12-03, national ID 5317. What format should my documents use?
+USER: CL-2102
+USER: Is a scanned PDF acceptable?
+EXPECTED: format; follow-up PDF remains document-format intent.
+
+C06 | business | Ya Wen Li | receipt
+USER: My name is Ya Wen Li, DOB 1989-12-03, ID 5317. Did you receive my upload?
+USER: CL-1899
+USER: It was sent last Friday.
+EXPECTED: receipt; date is contextual detail, not a new intent.
+
+C07 | business | Ma Tian | denial multi-intent
+USER: I am Ma Tian, born 1964-09-10, ID last four 6688. Why was the claim denied and can I appeal?
+USER: CL-3001
+USER: What is the denial reason in plain English?
+USER: And what is the last day to appeal?
+EXPECTED: denial_details -> appeal; context maintained across follow-ups.
+
+C08 | business | Ma Tian | case summary
+USER: Ma Tian, DOB 1964-09-10, ID 6688. Please summarize this case.
+USER: CL-3001
+USER: What are my next steps after the summary?
+EXPECTED: case_summary -> next_steps.
+
+C09 | business | Ava Lopez | status and missing documents
+USER: Ava Lopez, born 1990-08-21, SSN 9180. Is my claim still open, and do you need anything else?
+USER: CL-2011
+USER: What exactly is missing?
+EXPECTED: status + documents; claim=CL-2011.
+
+C10 | business | Ava Lopez | claim hints
+USER: My name is Ava Lopez, DOB 1990-08-21, SSN 9180. Find my closed healthcare claim from January.
+USER: CL-2011
+USER: Why is it marked closed?
+EXPECTED: claim hint routing; denial/status follow-up.
+
+C11 | business | Ya Wen Li | other claim switching
+USER: Ya Wen Li, DOB 1989-12-03, ID 5317. I want the payment amount for my dental claim.
+USER: CL-1899
+USER: Switch me to the other claim.
+USER: 1
+USER: Now tell me its status and expected reimbursement.
+EXPECTED: payment -> other_claim_inquiry -> status + payment on CL-2102.
+
+C12 | business | Margaret Chen | deadline abbreviation
+USER: Margaret Chen, DOB 1985-03-15, SSN 4472. I need to check the document ddl.
+USER: CL-2048
+USER: Is that the appeal deadline or the document submission deadline?
+EXPECTED: ddl normalized; clarification separates appeal vs submission deadline.
+
+C13 | business | Ma Tian | term explanation
+USER: Ma Tian, 1964-09-10, ID 6688. What does “diagnosis report” mean?
+USER: CL-3001
+USER: Is that the same as an office note?
+EXPECTED: term_explanation; comparison follow-up uses prior term context.
+
+C14 | business | Ava Lopez | correction
+USER: Ava Lopez, DOB 1990-08-21, SSN 9180. Tell me the status.
+USER: CL-2011
+USER: Actually, I meant the payment amount, not the status.
+USER: How much was approved?
+EXPECTED: intent correction status -> payment; follow-up remains payment.
+
+C15 | business | Ya Wen Li | explicit claim ID + switch
+USER: Ya Wen Li, DOB 1989-12-03, ID 5317. Check CL-1899 and tell me if documents arrived.
+USER: Can I check another case?
+USER: CL-2102
+USER: Were any documents requested for this one?
+EXPECTED: receipt -> other_claim_inquiry -> documents on CL-2102.
+
+C16 | emotional | Margaret Chen | anxious denial
+USER: Margaret Chen, DOB 1985-03-15, SSN 4472. I am terrified this denial will ruin everything. Why was it denied?
+USER: CL-2048
+USER: I feel ignored. What can I do next?
+EXPECTED: emotional_level=medium/high; denial_details -> next_steps; no identity leak.
+
+C17 | emotional | Margaret Chen | frustrated documents
+USER: Margaret Chen, 1985-03-15, SSN 4472. I am frustrated and exhausted. What documents are missing?
+USER: CL-2048
+USER: This is ridiculous; are you sure that list is complete?
+EXPECTED: emotion accumulation; documents; grounding guard.
+
+C18 | emotional | Ya Wen Li | multi-question emotional
+USER: Ya Wen Li, 1989-12-03, ID 5317. I am angry and worried. Why was payment denied, what can I appeal, and when is the deadline?
+USER: CL-1899
+USER: Please answer the deadline first.
+USER: Now explain the denial.
+EXPECTED: emotional intent + appeal/deadline/denial; requested ordering honored.
+
+C19 | emotional | Ya Wen Li | delay
+USER: Ya Wen Li, DOB 1989-12-03, ID 5317. I am stressed because this is taking forever. What is the status?
+USER: CL-2102
+USER: Is there anything I can do to speed it up?
+EXPECTED: emotion=medium; status -> next_steps.
+
+C20 | emotional | Ma Tian | missing report
+USER: Ma Tian, DOB 1964-09-10, ID 6688. I am overwhelmed. Which diagnosis report is missing?
+USER: CL-3001
+USER: I cannot get it from my provider. Is there an alternative?
+EXPECTED: documents -> alternatives; emotional context retained.
+
+C21 | emotional | Ava Lopez | follow-up escalation
+USER: Ava Lopez, DOB 1990-08-21, SSN 9180. I am upset and confused about the closed claim.
+USER: CL-2011
+USER: Why was it closed?
+USER: I am getting more frustrated. Can I speak to a human?
+EXPECTED: denial/status context; emotional escalation; handoff offered.
+
+C22 | emotional | Margaret Chen | payment anxiety
+USER: Margaret Chen, DOB 1985-03-15, SSN 4472. I am anxious. How much will I receive?
+USER: CL-2048
+USER: Why is the amount zero?
+EXPECTED: payment -> denial_details; emotion level tracked.
+
+C23 | emotional | Ya Wen Li | emotional other claim
+USER: Ya Wen Li, DOB 1989-12-03, ID 5317. I am really upset about this claim.
+USER: CL-1899
+USER: Can I check another claim? I cannot keep repeating myself.
+USER: 1
+EXPECTED: emotional intent; switch claim; no re-verification; history preserved.
+
+C24 | emotional | Ma Tian | safety-sensitive context
+USER: Ma Tian, DOB 1964-09-10, ID 6688. I feel hopeless about the denial. What should I do?
+USER: CL-3001
+USER: I am overwhelmed, but I want the appeal deadline first.
+EXPECTED: emotional support + appeal; high-risk language must be screened safely.
+
+C25 | emotional | Ava Lopez | repeated OK customer
+USER: OK
+USER: OK, my name is Ava Lopez, DOB 1990-08-21, SSN 9180.
+USER: OK, I want the status.
+USER: OK, CL-2011.
+USER: OK, can I check another claim?
+EXPECTED: acknowledgments do not erase context; status and claim-switch intents preserved.
+
+C26 | unrelated | Margaret Chen | weather
+USER: Margaret Chen, DOB 1985-03-15, SSN 4472. What will the weather be tomorrow?
+USER: CL-2048
+USER: Also, can you recommend a restaurant?
+EXPECTED: unrelated questions refused; claim remains gated/authorized.
+
+C27 | unrelated | Ya Wen Li | coding
+USER: Ya Wen Li, DOB 1989-12-03, ID 5317. Can you write Python code for me?
+USER: CL-1899
+USER: What is the capital of France?
+EXPECTED: unrelated intent; no claim facts disclosed.
+
+C28 | unrelated | Ma Tian | translation
+USER: Ma Tian, DOB 1964-09-10, ID 6688. Translate this unrelated paragraph for me.
+USER: CL-3001
+USER: What movie should I watch tonight?
+EXPECTED: unrelated intent; safe refusal and no grounding violation.
+
+C29 | unrelated | Ava Lopez | personal advice
+USER: Ava Lopez, DOB 1990-08-21, SSN 9180. Help me plan a vacation.
+USER: CL-2011
+USER: What is a good recipe for dinner?
+EXPECTED: unrelated intent; current claim not changed.
+
+C30 | unrelated | Ya Wen Li | sports
+USER: Ya Wen Li, DOB 1989-12-03, ID 5317. Who won the game last night?
+USER: CL-1899
+USER: Tell me a joke before we continue.
+EXPECTED: unrelated intent; no unauthorized claim response.
+
+VALIDATION CHECKLIST
+====================
+[ ] NLU runs on the first turn before verification.
+[ ] Pre-verification intent survives identity verification and claim selection.
+[ ] Multiple claims require ID, month, type, status, or claim keywords.
+[ ] One claim auto-selects without asking for an ID again.
+[ ] Claim switching preserves claim_history and authorization.
+[ ] Follow-up questions use the correct prior intent and claim context.
+[ ] Corrections replace the active intent without erasing history.
+[ ] Emotional level/streak and handoff behavior are tracked.
+[ ] Repeated “OK” is treated as acknowledgment, not unrelated input.
+[ ] Unrelated questions never disclose claim information.

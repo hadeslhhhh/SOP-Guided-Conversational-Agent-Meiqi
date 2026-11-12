@@ -1,0 +1,86 @@
+CLAIM SWITCH + PRE-VERIFICATION INTENT CONVERSATION REPORT
+============================================================
+
+CASE 301 - Margaret Chen
+Expected: pre-verification documents intent; CL-2048 -> CL-2055
+
+BOT: Hi there. I can help you look into an insurance claim. To get started, please share your identity details.
+USER: My name is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472. I want to know the missing documents.
+BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim ID, approximate month, claim type, or status.
+STATE: phase=RESOLVE_INTENT; intent=documents; case_id=None; claim_history=[]
+
+USER: CL-2048
+BOT: The recorded missing documents for claim CL-2048 are: pathology report, office note.
+STATE: phase=PROCESS_CASE; intent=documents; case_id=CL-2048; claim_history=[]
+
+USER: Can I check another claim?
+BOT: I found these other claims: 1. CL-2055. Please choose one.
+STATE: phase=RESOLVE_INTENT; intent=documents; case_id=None; claim_history=['CL-2048']
+
+USER: 1
+BOT: The recorded missing documents for claim CL-2055 are: No missing documents are listed.
+STATE: phase=PROCESS_CASE; intent=documents; case_id=CL-2055; claim_history=['CL-2048']
+
+USER: What is the status of this claim?
+BOT: Claim CL-2055 is recorded as open.
+STATE: phase=PROCESS_CASE; intent=status; case_id=CL-2055; claim_history=['CL-2048']
+
+
+CASE 302 - Ya Wen Li
+Expected: pre-verification denial/appeal intent; CL-1899 -> CL-2102
+
+BOT: Hi there. I can help you look into an insurance claim. To get started, please share your identity details.
+USER: My name is Ya Wen Li. My date of birth is 1989-12-03 and the last four digits of my ID are 5317. Why was my claim denied and what is the appeal deadline?
+BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim ID, approximate month, claim type, or status.
+STATE: phase=RESOLVE_INTENT; intent=denial_details; case_id=None; claim_history=[]
+
+USER: CL-1899
+BOT: The recorded denial reason for claim CL-1899 is: not available in the record.
+STATE: phase=PROCESS_CASE; intent=denial_details; case_id=CL-1899; claim_history=[]
+
+USER: I need to check a different claim.
+BOT: I found these other claims: 1. CL-2102. Please choose one.
+STATE: phase=RESOLVE_INTENT; intent=denial_details; case_id=None; claim_history=['CL-1899']
+
+USER: 1
+BOT: The recorded denial reason for claim CL-2102 is: not available in the record.
+STATE: phase=PROCESS_CASE; intent=denial_details; case_id=CL-2102; claim_history=['CL-1899']
+
+USER: What documents are missing?
+BOT: The recorded missing documents for claim CL-2102 are: No missing documents are listed.
+STATE: phase=PROCESS_CASE; intent=documents; case_id=CL-2102; claim_history=['CL-1899']
+
+
+CASE 303 - Ya Wen Li
+Expected: pre-verification payment intent; CL-1899 -> CL-2102
+
+BOT: Hi there. I can help you look into an insurance claim. To get started, please share your identity details.
+USER: This is Ya Wen Li, born 1989-12-03, national ID last four 5317. Can I check the payment amount?
+BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim ID, approximate month, claim type, or status.
+STATE: phase=RESOLVE_INTENT; intent=payment; case_id=None; claim_history=[]
+
+USER: CL-1899
+BOT: The recorded reimbursement for claim CL-1899 is 425.00.
+STATE: phase=PROCESS_CASE; intent=payment; case_id=CL-1899; claim_history=[]
+
+USER: Can I switch to another case?
+BOT: I found these other claims: 1. CL-2102. Please choose one.
+STATE: phase=RESOLVE_INTENT; intent=payment; case_id=None; claim_history=['CL-1899']
+
+USER: CL-2102
+BOT: The recorded reimbursement for claim CL-2102 is 3200.00.
+STATE: phase=PROCESS_CASE; intent=payment; case_id=CL-2102; claim_history=['CL-1899']
+
+USER: What is the current status?
+BOT: Claim CL-2102 is recorded as open.
+STATE: phase=PROCESS_CASE; intent=status; case_id=CL-2102; claim_history=['CL-1899']
+
+
+SUMMARY
+=======
+CASE 301: passed; final claim=CL-2055; history=[CL-2048]
+CASE 302: passed; final claim=CL-2102; history=[CL-1899]
+CASE 303: passed; final claim=CL-2102; history=[CL-1899]
+
+All three cases preserved the pre-verification intent and successfully switched
+to another authorized claim.

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insurance SOP Agent</title>
+<style>
+:root{--ink:#30313d;--muted:#858690;--panel:#fff;--soft:#f7f7f9;--line:#ececf0;--bot:#fff;--user:#f7f7f9;--accent:#ff9f1c;--user-accent:#ff4d59}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.page{max-width:1260px;margin:0 auto;padding:28px 34px 26px}.header{padding:0 22px 26px}.header h1{font-size:52px;line-height:1.08;margin:0 0 22px;font-weight:760;letter-spacing:-1.8px}.header p{font-size:24px;color:var(--muted);margin:0;letter-spacing:-.3px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:24px}.conversation{min-height:650px;border-top:1px solid var(--line);padding:24px 0}.chat{min-height:440px;max-height:calc(100vh - 300px);overflow:auto;padding:0 22px}.message{display:flex;gap:16px;align-items:flex-start;margin:0 0 24px}.message.user{flex-direction:row-reverse}.avatar{width:48px;height:48px;flex:0 0 48px;border-radius:13px;display:grid;place-items:center;font-size:24px;color:#fff}.bot .avatar{background:var(--accent)}.user .avatar{background:var(--user-accent)}.bubble{max-width:84%;font-size:24px;line-height:1.48;padding:5px 0;white-space:pre-wrap}.user .bubble{background:var(--user);border-radius:17px;padding:20px 24px}.composer{border:2px solid #ff5b61;border-radius:18px;padding:8px 12px;margin:18px 22px 0;display:flex;gap:10px;background:#fff}.composer input{border:0;outline:0;flex:1;font:inherit;font-size:20px;padding:12px 10px;color:var(--ink)}.composer button{border:0;border-radius:12px;background:#30313d;color:#fff;font-size:18px;padding:0 24px;cursor:pointer}.composer button:disabled{opacity:.5}.side{border-left:1px solid var(--line);padding:22px 0 0 22px}.side h2{font-size:20px;margin:0 0 16px}.status{background:var(--soft);border-radius:14px;padding:16px;font-size:14px;line-height:1.7;color:#5e606b}.status strong{color:var(--ink)}.new{width:100%;border:0;border-radius:12px;background:#686f80;color:#fff;font-size:16px;padding:13px;margin-top:18px;cursor:pointer}.privacy{color:var(--muted);font-size:12px;margin-top:18px;line-height:1.5}@media(max-width:850px){.page{padding:20px 12px}.header{padding:0 8px 20px}.header h1{font-size:38px}.header p{font-size:17px}.layout{display:block}.side{border-left:0;border-top:1px solid var(--line);padding:18px 8px}.chat{padding:0 8px}.composer{margin:18px 8px 0}.bubble{font-size:18px}.user .bubble{padding:14px 17px}}
+</style>
+<style>.post-actions{display:none;gap:10px;margin:12px 22px 0}.post-actions button{border:0;border-radius:10px;color:#fff;font-size:16px;padding:12px 18px;cursor:pointer}.post-actions .send-summary{background:#2f64d6}.post-actions .skip-summary{background:#686f80}</style>
+<style>.mode-notice{display:none;margin:10px 22px 0;padding:10px 14px;border-radius:9px;background:#fff3cd;color:#765b00;font-size:14px}</style>
+</head>
+<body>
+<main class="page">
+  <header class="header">
+    <h1>Insurance SOP Agent</h1>
+    <p>A guided insurance claims conversation with identity verification, case matching, and grounded answers.</p>
+  </header>
+  <div class="layout">
+    <section class="conversation">
+      <div id="chat" class="chat"></div>
+      <form id="composer" class="composer">
+        <input id="input" autocomplete="off" placeholder="Type your message">
+        <button id="send" type="submit">Send</button>
+      </form>
+      <div id="post-actions" class="post-actions">
+        <button class="send-summary" type="button" onclick="sendPostProcessChoice('yes')">Send summary</button>
+        <button class="skip-summary" type="button" onclick="sendPostProcessChoice('no')">Skip email</button>
+      </div>
+      <div id="mode-notice" class="mode-notice">OpenAI API is unavailable. Please reconnect the API.</div>
+    </section>
+    <aside class="side">
+      <h2>Session</h2>
+      <div id="status" class="status">Loading session...</div>
+      <button class="new" type="button" onclick="startNewConversation()">Start New Conversation</button>
+      <div class="privacy">Your claim information is protected. Case details are shown only after identity and case verification.</div>
+    </aside>
+  </div>
+</main>
+<script>
+let sid=localStorage.sid||'',countdownTimer=null,connectionTimeoutTimer=null,conversationClosed=false;
+const chat=document.querySelector('#chat'),statusBox=document.querySelector('#status'),input=document.querySelector('#input'),send=document.querySelector('#send'),postActions=document.querySelector('#post-actions'),modeNotice=document.querySelector('#mode-notice');
+function avatar(role){return role==='user'?'◉':'▣'}
+function draw(message){const row=document.createElement('div');row.className='message '+message.role;if(message.thinking)row.id='thinking';const icon=document.createElement('div');icon.className='avatar';icon.textContent=avatar(message.role);const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=message.content;row.append(icon,bubble);chat.appendChild(row);chat.scrollTop=chat.scrollHeight}
+function showState(s){const mode=s.api_mode===true?'OpenAI API':s.api_mode===false?'Local fallback':'Checking';const emotion=s.emotion||'Neutral / Calm';const level=emotion==='Neutral / Calm'?'':` (${escapeHtml(s.emotion_level||'low')})`;statusBox.innerHTML='<strong>Model</strong><br>'+escapeHtml(s.model||'gpt-5.6')+'<br><strong>Mode</strong><br>'+mode+'<br><br><strong>Current phase</strong><br>'+escapeHtml(s.phase||'VERIFY_ID')+'<br><br><strong>Emotion</strong><br>'+escapeHtml(emotion)+level+'<br><br><strong>Progress</strong><br>'+Object.entries(s.stage_progress||{}).map(([k,v])=>escapeHtml(k)+': '+Math.round(Number(v)*100)+'%').join('<br>');postActions.style.display=(s.phase==='POST_PROCESS'&&s.post_process_step==='ask_summary')?'flex':'none';modeNotice.style.display=s.api_mode===false?'block':'none'}
+function startCountdown(seconds){if(countdownTimer)clearInterval(countdownTimer);let remaining=seconds;const update=()=>{let node=document.querySelector('#countdown');if(!node){node=document.createElement('strong');node.id='countdown';statusBox.appendChild(document.createElement('br'));statusBox.appendChild(document.createElement('br'));statusBox.appendChild(node)}node.textContent=remaining>0?'Closing in '+remaining+' seconds...':'Closing now...'};update();countdownTimer=setInterval(()=>{remaining-=1;update();if(remaining<=0)clearInterval(countdownTimer)},1000)}
+function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function startNewConversation(){if(sid){navigator.sendBeacon('/api/reset',new Blob([JSON.stringify({session_id:sid})],{type:'application/json'}));}localStorage.removeItem('sid');location.reload()}
+function closeForConnectionTimeout(){if(conversationClosed)return;conversationClosed=true;if(connectionTimeoutTimer)clearTimeout(connectionTimeoutTimer);document.querySelector('#thinking')?.remove();send.disabled=true;input.disabled=true;document.querySelector('#post-actions').style.display='none';draw({role:'bot',content:'The connection timed out, so I’m closing this conversation for your protection. Please start a new conversation and try again.'});if(sid){navigator.sendBeacon('/api/reset',new Blob([JSON.stringify({session_id:sid})],{type:'application/json'}));localStorage.removeItem('sid');}}
+function startConnectionTimeout(){if(connectionTimeoutTimer)clearTimeout(connectionTimeoutTimer);connectionTimeoutTimer=setTimeout(closeForConnectionTimeout,30000)}
+function sendPostProcessChoice(choice){input.value=choice;document.querySelector('#composer').requestSubmit()}
+async function initial(){draw({role:'bot',content:'Hi there. I can help you look into an insurance claim. To get started, please share your full name and any of your date of birth, phone number, email, or ID last four digits.'});const base={phase:'VERIFY_ID',emotion:'Neutral / Calm',emotion_level:'low',stage_progress:{VERIFY_ID:0,RESOLVE_INTENT:0,PROCESS_CASE:0,POST_PROCESS:0}};const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),10000);try{const response=await fetch('/api/config',{signal:controller.signal});const config=await response.json();showState({...base,...config})}catch(error){showState({...base,model:'Unavailable',api_mode:false,api_provider:'Unavailable'});}finally{clearTimeout(timer)}}
+document.querySelector('#composer').onsubmit=async e=>{e.preventDefault();const message=input.value.trim();if(!message||send.disabled||conversationClosed)return;draw({role:'user',content:message});input.value='';send.disabled=true;draw({role:'bot',content:'Agent is thinking...',thinking:true});startConnectionTimeout();const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),30000);try{const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sid,message}),signal:controller.signal});if(!response.ok)throw new Error('HTTP '+response.status);const data=await response.json();sid=data.session_id;localStorage.sid=sid;clearTimeout(connectionTimeoutTimer);document.querySelector('#thinking')?.remove();draw({role:'bot',content:data.answer});showState({...data.state,model:data.model,api_mode:data.api_mode,api_provider:data.api_provider});if(data.state.disconnect_scheduled)startCountdown(30);if(data.state.disconnected){localStorage.removeItem('sid')}}catch(error){if(error.name==='AbortError'){closeForConnectionTimeout()}else{clearTimeout(connectionTimeoutTimer);document.querySelector('#thinking')?.remove();draw({role:'bot',content:'The connection could not be completed. I’m closing this conversation. Please start a new conversation and try again.'});closeForConnectionTimeout()}}finally{clearTimeout(timer);if(!conversationClosed){send.disabled=false;input.focus()}}};
+initial();
+window.addEventListener('beforeunload',()=>{if(sid){navigator.sendBeacon('/api/reset',new Blob([JSON.stringify({session_id:sid})],{type:'application/json'}));}});
+</script>
+</body>
+</html>

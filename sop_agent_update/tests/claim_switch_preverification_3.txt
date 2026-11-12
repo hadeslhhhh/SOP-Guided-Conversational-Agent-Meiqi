@@ -1,0 +1,37 @@
+CLAIM SWITCH / PRE-VERIFICATION INTENT TEST SET
+
+Purpose: verify that NLU starts on the very first customer turn, preserves the
+pending business intent through identity verification and claim selection, and
+supports switching to another authorized claim.
+
+CASE 301 - Margaret Chen / P9
+Identity: My name is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+Pre-verification intent: missing documents -> expected intent: documents
+Initial claim: CL-2048
+Switch: Can I check another claim?
+Expected options: CL-2055
+Select: 1
+Final check: What is the status of this claim? -> expected status on CL-2055
+
+CASE 302 - Ya Wen Li / P13
+Identity: My name is Ya Wen Li. My date of birth is 1989-12-03 and the last four digits of my ID are 5317.
+Pre-verification intent: denial reason + appeal deadline -> expected primary intent: denial
+Initial claim: CL-1899
+Switch: I need to check a different claim.
+Expected options: CL-2102
+Select: 1
+Final check: What documents are missing? -> expected documents on CL-2102
+
+CASE 303 - Ya Wen Li / P13
+Identity: This is Ya Wen Li, born 1989-12-03, national ID last four 5317.
+Pre-verification intent: payment amount -> expected intent: payment
+Initial claim: CL-1899
+Switch: Can I switch to another case?
+Select explicitly: CL-2102
+Final check: What is the current status? -> expected status on CL-2102
+
+Assertions for each case:
+- The first turn must produce a non-unclear NLU intent before verification.
+- The intent must remain in Session.current_intent or Session.original_intent after verification.
+- Claim switching must preserve authorization and populate claim_history.
+- The selected claim must be the final active case_id.

@@ -1,0 +1,5399 @@
+========================================================================================
+顾客 201 | 类型：multi_question
+运行模式：LOCAL
+预期意图：receipt_confirmation
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I uploaded the documents yesterday. Did you receive them, and how long will the review take?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 202 | 类型：multi_question
+运行模式：LOCAL
+预期意图：denial_question
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Why was the claim denied, and what is the appeal deadline?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 203 | 类型：multi_question
+运行模式：LOCAL
+预期意图：missing_documents
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+What documents are missing, and can I upload them from my phone?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 204 | 类型：multi_question
+运行模式：LOCAL
+预期意图：payment_question
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+How much will I receive, and when should the payment be issued?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 205 | 类型：multi_question
+运行模式：LOCAL
+预期意图：case_summary
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Can you summarize the denial and tell me what I should do next?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 206 | 类型：multi_question
+运行模式：LOCAL
+预期意图：document_requirements
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+What format should the pathology report have, and where do I send it?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 207 | 类型：multi_question
+运行模式：LOCAL
+预期意图：document_alternative
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Can I use a replacement report, and by what date should I send it?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 208 | 类型：multi_question
+运行模式：LOCAL
+预期意图：status_inquiry
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Is the claim still being processed, or do you need something else from me?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 209 | 类型：multi_question
+运行模式：LOCAL
+预期意图：appeal_question
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+How do I appeal this, and how much time do I have?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 210 | 类型：multi_question
+运行模式：LOCAL
+预期意图：payment_question
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+What do I owe out of pocket, and what amount was allowed?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 211 | 类型：emotional
+运行模式：LOCAL
+预期意图：denial_question
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am honestly overwhelmed and angry. Please tell me why this claim was denied.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 212 | 类型：emotional
+运行模式：LOCAL
+预期意图：receipt_confirmation
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am worried sick about the delay—did my upload actually arrive?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 213 | 类型：emotional
+运行模式：LOCAL
+预期意图：missing_documents
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+This is exhausting and I feel ignored. What documents are still missing?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 214 | 类型：emotional
+运行模式：LOCAL
+预期意图：submission_deadline
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am scared I will miss the deadline. When exactly do I need to submit this?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 215 | 类型：emotional
+运行模式：LOCAL
+预期意图：payment_question
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am frustrated, but I need a straight answer: how much will I receive?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 216 | 类型：emotional
+运行模式：LOCAL
+预期意图：term_explanation
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I feel lost. Can you explain what the office note means?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 217 | 类型：emotional
+运行模式：LOCAL
+预期意图：next_steps
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am panicking about the denial. What can I do next?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 218 | 类型：emotional
+运行模式：LOCAL
+预期意图：processing_time
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am really upset with how long this is taking. How long is the review?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 219 | 类型：emotional
+运行模式：LOCAL
+预期意图：document_alternative
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I cannot get the original report and I am stressed. What can replace it?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 220 | 类型：emotional
+运行模式：LOCAL
+预期意图：case_summary
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I am disappointed and confused. Could you summarize what happened?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 221 | 类型：unrelated
+运行模式：LOCAL
+预期意图：unclear
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Before we continue, can you recommend a restaurant?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 222 | 类型：unrelated
+运行模式：LOCAL
+预期意图：unclear
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+What is the weather supposed to be like tomorrow?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 223 | 类型：unrelated
+运行模式：LOCAL
+预期意图：unclear
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Can you help me write an email to my landlord?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 224 | 类型：unrelated
+运行模式：LOCAL
+预期意图：unclear
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+I just remembered—what is a good movie to watch tonight?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否
+
+========================================================================================
+顾客 225 | 类型：unrelated
+运行模式：LOCAL
+预期意图：unclear
+========================================================================================
+
+【第 1 轮】
+顾客：
+Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 2 轮】
+顾客：
+My claim number is CL-2048.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 3 轮】
+顾客：
+Can you translate a short paragraph for me?
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 4 轮】
+顾客：
+Yes, please continue.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 5 轮】
+顾客：
+No, that is all.
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 6 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 7 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 8 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 9 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 10 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 11 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 12 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 13 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 14 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 15 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 16 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+【第 17 轮】
+顾客：
+No
+
+系统：
+OpenAI API is unavailable. Please reconnect the API and try again.
+
+NLU：
+{
+  "api_error": "OpenAI API is unavailable. Please reconnect the API and try again."
+}
+
+Conversion 结果：
+  案件：-
+  阶段：VERIFY_ID
+  完成：否
+  已安排断开：否

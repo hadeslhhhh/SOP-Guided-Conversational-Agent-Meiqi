@@ -1,0 +1,12 @@
+__pycache__
+.git
+tests
+conversion/*
+!conversion/.gitkeep
+*.pyc
+.venv
+.env
+.DS_Store
+sessions
+runtime
+*.log

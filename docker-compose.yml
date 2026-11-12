@@ -1,0 +1,20 @@
+name: sop-guided-conversational-agent-meiqi
+
+services:
+  sop-guided-conversational-agent-meiqi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      NLU_MODE: ${NLU_MODE:-openai}
+      SESSION_DB: /data/sessions.sqlite3
+    volumes:
+      - sop_guided_conversational_agent_meiqi_sessions:/data
+    restart: unless-stopped
+
+volumes:
+  sop_guided_conversational_agent_meiqi_sessions:

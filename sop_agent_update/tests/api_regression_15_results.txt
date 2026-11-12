@@ -1,0 +1,244 @@
+API-ONLY END-TO-END REGRESSION: 15 CASES
+========================================================================
+RESULT: 15/15 cases completed; elapsed=209.5s
+
+CASE 1: status | expected=status_inquiry
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider's office note. To proceed, you need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you have any questions about how to obtain these documents or need assistance with the submission process, please let me know!
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: What is the current status of this claim?
+TURN 3 BOT: The current status of your claim (CL-2048) is denied. The denial was due to missing required documents, specifically the pathology report and the office note. To proceed, you'll need to submit these documents by the appeal deadline of March 18, 2026. If you have any questions about how to obtain or submit these documents, feel free to ask.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=status; answered=['claim_status']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 2: denial | expected=denial_question
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider office note. To proceed, you need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you have any questions about how to obtain these documents or need assistance with the submission process, please let me know!
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: Why was this claim denied?
+TURN 3 BOT: Your claim was denied because the review file did not include the required pathology report and the treating provider office note. To proceed, you'll need to submit those documents. If you have any questions about how to obtain or submit them, feel free to ask.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=denial_details; answered=['denial_reason']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 3: missing_documents | expected=missing_documents
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the office note. You have until March 18, 2026, to appeal this decision.
+
+To proceed, please submit the required documents as soon as possible. You can use the member portal or the claim upload link for submission. If you need further assistance with the submission process, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: What documents are still missing?
+TURN 3 BOT: The missing documents for your claim are the pathology report and the office note.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=documents; answered=['missing_documents']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 4: document_submission | expected=document_submission
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing a pathology report and an office note. To proceed, you need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you need guidance on how to obtain these documents or submit them, please let me know!
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: How do I submit the missing documents?
+TURN 3 BOT: To submit the missing documents for your claim (CL-2048), you should use the member portal or the claim upload link if possible. Each file must be legible and complete, including claim-identifying details and relevant dates. If online upload isn't available, support can assist you with fax or mail submission.
+
+The documents you need to submit are the pathology report and the office note.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=documents; answered=['missing_documents', 'document_submission_channel']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 5: requirements | expected=document_requirements
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing required documents: the pathology report and the office note. You have until March 18, 2026, to appeal this decision.
+
+To proceed, please submit the missing documents as soon as possible. You can use the member portal or the claim upload link to attach them. If online submission isn't an option, we can help arrange fax or mail handling.
+
+If you have any questions about the document requirements or need assistance, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: What documents are required?
+TURN 3 BOT: For your claim, the required documents are the pathology report and the office note.
+
+When submitting these documents, it's best to use the member portal or the claim upload link first, ensuring that each file is legible and complete with relevant details. If online submission isn't possible, support can assist with fax or mail options.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=documents; answered=['missing_documents', 'document_requirements']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 6: deadline | expected=submission_deadline
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically a pathology report and an office note. To appeal this decision, you need to submit the required documents by March 18, 2026.
+
+If you need assistance with obtaining these documents, consider reaching out to your treating provider or facility for replacements. If you have any questions about the appeal process or need further help, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: What is the deadline to submit documents?
+TURN 3 BOT: The claim record does not specify a separate deadline for submitting documents. However, it is recommended to submit the requested documents within a week.
+
+For your claim, you can use the member portal or claim upload link for submission. Each file should be legible and complete, with relevant details visible. If online upload is not available, support can assist with fax or mail submission.
+
+I could not confirm every requested detail from the authorized record. I can connect you with a human representative to review the remaining information.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=documents; answered=['missing_documents', 'document_submission_channel']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 7: processing_time | expected=processing_time
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider office note. To appeal this decision, you need to submit the required documents by March 18, 2026.
+
+If you have any questions about how to obtain these documents or need assistance with the appeal process, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: How long will processing take?
+TURN 3 BOT: The average processing time for your claim is usually less than a week after the missing files are submitted. However, please note that the review process may take longer if additional information is needed or if another review cycle is required.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=timing; answered=['processing_time']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 8: payment | expected=payment_question
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing required documents: the pathology report and the treating provider office note. To proceed, you need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you need assistance with how to obtain these documents or submit them, please let me know!
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: When will payment be issued?
+TURN 3 BOT: The claim record does not include a payment date for your claim. The recorded reimbursement amount for your claim is $0.00.
+
+I could not confirm every requested detail from the authorized record. I can connect you with a human representative to review the remaining information.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=payment; answered=['payment_amount']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 9: appeal | expected=appeal_question
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider office note. You have until March 18, 2026, to appeal this decision.
+
+To proceed, please submit the required documents as soon as possible. If you need guidance on how to obtain these documents or how to submit them, let me know!
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: How can I appeal the decision?
+TURN 3 BOT: To appeal the decision on your healthcare claim, you need to submit the necessary documents, specifically the pathology report and the office note, by the appeal deadline of March 18, 2026.
+
+You can use the member portal or the claim upload link to submit these documents. If online submission isn't possible, support can assist you with fax or mail options. Make sure that each file is legible and includes relevant details like your claim information. If you have any questions about the submission process, feel free to ask.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=appeal; answered=['appeal_deadline']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 10: summary | expected=case_summary
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider's office note. You have until March 18, 2026, to appeal this decision.
+
+To move forward, please gather the required documents and submit them through the member portal or the claim upload link. If you need assistance with submission methods, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: Please summarize this claim.
+TURN 3 BOT: Your claim (CL-2048) has been denied due to missing documentation. Specifically, the denial was because the review file did not include the pathology report and the treating provider's office note.
+
+To proceed, you will need to submit the following documents: 
+- Pathology report
+- Office note
+
+The deadline to appeal this decision is March 18, 2026. The expected reimbursement amount is $0.00, as the claim was denied. If you have any questions about submitting the required documents, feel free to ask.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=case_summary; answered=['case_summary']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 11: next_steps | expected=next_steps
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing required documents: the pathology report and the treating provider office note. To proceed, you need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you have any questions about how to obtain these documents or need assistance with the submission process, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: What should I do next?
+TURN 3 BOT: To proceed with your claim (CL-2048), you need to submit the missing documents: the pathology report and the office note. Make sure these documents are clear and complete. You can use the member portal or claim upload link for submission. If you need assistance with fax or mail options, please let me know.
+
+Additionally, you have until March 18, 2026, to appeal the denial if you choose to do so. If you have any questions about the submission process or need help, feel free to ask!
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=next_steps; answered=['next_steps']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 12: receipt | expected=receipt_confirmation
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents: the pathology report and the office note. To proceed, you will need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you have any questions about how to obtain these documents or need assistance with the submission process, feel free to ask.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: Did you receive the documents I uploaded?
+TURN 3 BOT: I cannot confirm whether the documents you uploaded were received, as there is no upload receipt available for your claim.
+
+Currently, the missing documents for your claim are the pathology report and the office note. If you need assistance with obtaining these documents, please let me know.
+
+I could not confirm every requested detail from the authorized record. I can connect you with a human representative to review the remaining information.
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=documents; answered=['missing_documents']
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 13: term | expected=term_explanation
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the office note. To proceed, you will need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you need assistance with document submission, the member portal or claim upload link is the best starting point. If online options are not available, support can help arrange fax or mail submissions.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: Please explain the deductible.
+TURN 3 BOT: The deductible is the amount you must pay out of pocket for healthcare services before your insurance begins to cover the costs. In your case, since the claim has been denied, no reimbursement is expected, and the deductible will not apply until the claim is approved.
+
+If you need further clarification or have more questions about your claim, feel free to ask!
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=term_explanation; answered=[]
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 14: term | expected=term_explanation
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider office note. You have until March 18, 2026, to appeal this decision.
+
+To proceed, please submit the required documents as soon as possible. If you need assistance with the submission process, you can use the member portal or the claim upload link. If online submission isn't an option, support can help arrange for fax or mail.
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: Please explain the deductible.
+TURN 3 BOT: The deductible for your healthcare claim is not specified in the provided information. However, a deductible is typically the amount you must pay out-of-pocket for healthcare services before your insurance begins to cover the costs.
+
+If you have further questions about your specific deductible or need assistance with your claim, please let me know!
+TURN 3 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=term_explanation; answered=[]
+RESULT: PASS
+------------------------------------------------------------------------
+CASE 15: human_transfer | expected=human_transfer
+TURN 1 USER: My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+TURN 1 BOT: Thank you. Your identity is verified. I found multiple claims. Please provide the claim number or describe the claim using its approximate month, type, or status.
+TURN 1 STATE: phase=RESOLVE_INTENT; verified=True; claim=None; intent=None; answered=[]
+TURN 2 USER: My claim number is CL-2048.
+TURN 2 BOT: Your claim number CL-2048 has been denied due to missing documents, specifically the pathology report and the treating provider office note. To proceed, you need to submit these documents by the appeal deadline of March 18, 2026.
+
+If you need guidance on how to obtain these documents or submit them, please let me know!
+TURN 2 STATE: phase=PROCESS_CASE; verified=True; claim=CL-2048; intent=other_claim_inquiry; answered=[]
+TURN 3 USER: I need to speak with a human representative.
+TURN 3 BOT: Your human-assistance ticket DEMO-HI-742615519B has been created (demo).
+TURN 3 STATE: phase=COMPLETE; verified=True; claim=CL-2048; intent=human_transfer; answered=[]
+RESULT: PASS
+------------------------------------------------------------------------

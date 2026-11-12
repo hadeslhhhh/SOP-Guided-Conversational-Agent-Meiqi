@@ -1,0 +1,714 @@
+NEW SOP_AGENT_UPDATE - COMPLEX 25 CONVERSATION REPORT
+========================================================================
+
+Cases: 25
+Verified: 25
+Normalized intent observed: 25/25
+Conversation complete: 0
+Runtime errors: 0
+
+------------------------------------------------------------------------
+CASE 201 | Margaret Chen | multi_question
+Expected intent: receipt_confirmation
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=timing | secondary=['receipt', 'documents'] | requested_field=processing_time | emotion=None | handoff=None
+USER: I uploaded the documents yesterday. Did you receive them, and how long will the review take?
+ASSISTANT: The available record does not include a processing-time guarantee for claim CL-2048.
+
+The available record does not include an upload receipt for claim CL-2048, so I cannot confirm whether the documents were received.
+
+The recorded missing documents for claim CL-2048 are: pathology report, office note.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 202 | Margaret Chen | multi_question
+Expected intent: denial_question
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=denial_details | secondary=['timing', 'appeal'] | requested_field=denial_reason | emotion=None | handoff=None
+USER: Why was the claim denied, and what is the appeal deadline?
+ASSISTANT: The recorded denial reason for claim CL-2048 is: the review file did not include the pathology report and the treating provider office note
+
+The available record does not include a processing-time guarantee for claim CL-2048.
+
+The recorded appeal deadline for claim CL-2048 is 2026-03-18.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 203 | Margaret Chen | multi_question
+Expected intent: missing_documents
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=submission | secondary=['documents'] | requested_field=document_submission_method | emotion=None | handoff=None
+USER: What documents are missing, and can I upload them from my phone?
+ASSISTANT: The claim record does not specify the upload channel for claim CL-2048. Please use the insurer's documented submission channel or contact a representative.
+
+The recorded missing documents for claim CL-2048 are: pathology report, office note.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 204 | Margaret Chen | multi_question
+Expected intent: payment_question
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=payment | secondary=['timing'] | requested_field=expected_reimbursement | emotion=None | handoff=None
+USER: How much will I receive, and when should the payment be issued?
+ASSISTANT: The recorded reimbursement for claim CL-2048 is 0.00.
+
+The available record does not include a processing-time guarantee for claim CL-2048.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 205 | Margaret Chen | multi_question
+Expected intent: case_summary
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=denial_details | secondary=['case_summary'] | requested_field=case_summary | emotion=None | handoff=None
+USER: Can you summarize the denial and tell me what I should do next?
+ASSISTANT: The recorded denial reason for claim CL-2048 is: the review file did not include the pathology report and the treating provider office note
+
+Claim CL-2048 is recorded as denied.
+
+Recorded denial reason: the review file did not include the pathology report and the treating provider office note
+
+Recorded missing documents: pathology report, office note.
+
+Recorded appeal deadline: 2026-03-18.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 206 | Margaret Chen | multi_question
+Expected intent: document_requirements
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=format | secondary=['documents', 'submission'] | requested_field=document_submission_method | emotion=None | handoff=None
+USER: What format should the pathology report have, and where do I send it?
+ASSISTANT: The claim record does not specify a required file format or signature rule for claim CL-2048. Please confirm the current document requirements with the insurer.
+
+The recorded missing documents for claim CL-2048 are: pathology report, office note.
+
+The claim record does not specify the upload channel for claim CL-2048. Please use the insurer's documented submission channel or contact a representative.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 207 | Margaret Chen | multi_question
+Expected intent: document_alternative
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=alternatives | secondary=['submission'] | requested_field=document_submission_method | emotion=None | handoff=None
+USER: Can I use a replacement report, and by what date should I send it?
+ASSISTANT: The claim record does not confirm whether a replacement document is acceptable for claim CL-2048. A claims representative should confirm an approved alternative before submission.
+
+The claim record does not specify the upload channel for claim CL-2048. Please use the insurer's documented submission channel or contact a representative.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 208 | Margaret Chen | multi_question
+Expected intent: status_inquiry
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=status | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Is the claim still being processed, or do you need something else from me?
+ASSISTANT: Claim CL-2048 is recorded as denied.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 209 | Margaret Chen | multi_question
+Expected intent: appeal_question
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=appeal | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: How do I appeal this, and how much time do I have?
+ASSISTANT: The recorded appeal deadline for claim CL-2048 is 2026-03-18.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 210 | Margaret Chen | multi_question
+Expected intent: payment_question
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=payment | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: What do I owe out of pocket, and what amount was allowed?
+ASSISTANT: The recorded reimbursement for claim CL-2048 is 0.00.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 211 | Margaret Chen | emotional
+Expected intent: denial_question
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=denial_details | secondary=['emotional_support'] | requested_field=denial_reason | emotion=distressed | handoff=None
+USER: I am honestly overwhelmed and angry. Please tell me why this claim was denied.
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+The recorded denial reason for claim CL-2048 is: the review file did not include the pathology report and the treating provider office note
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 212 | Margaret Chen | emotional
+Expected intent: receipt_confirmation
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=receipt | secondary=['submission', 'emotional_support'] | requested_field=document_submission_method | emotion=distressed | handoff=None
+USER: I am worried sick about the delay—did my upload actually arrive?
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+The available record does not include an upload receipt for claim CL-2048, so I cannot confirm whether the documents were received.
+
+The claim record does not specify the upload channel for claim CL-2048. Please use the insurer's documented submission channel or contact a representative.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 213 | Margaret Chen | emotional
+Expected intent: missing_documents
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=documents | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: This is exhausting and I feel ignored. What documents are still missing?
+ASSISTANT: The recorded missing documents for claim CL-2048 are: pathology report, office note.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 214 | Margaret Chen | emotional
+Expected intent: submission_deadline
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=timing | secondary=['submission', 'emotional_support'] | requested_field=document_submission_method | emotion=distressed | handoff=None
+USER: I am scared I will miss the deadline. When exactly do I need to submit this?
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+The available record does not include a processing-time guarantee for claim CL-2048.
+
+The claim record does not specify the upload channel for claim CL-2048. Please use the insurer's documented submission channel or contact a representative.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 215 | Margaret Chen | emotional
+Expected intent: payment_question
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=payment | secondary=['emotional_support'] | requested_field=expected_reimbursement | emotion=distressed | handoff=None
+USER: I am frustrated, but I need a straight answer: how much will I receive?
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+The recorded reimbursement for claim CL-2048 is 0.00.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 216 | Margaret Chen | emotional
+Expected intent: term_explanation
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=term_explanation | secondary=['documents'] | requested_field=None | emotion=None | handoff=None
+USER: I feel lost. Can you explain what the office note means?
+ASSISTANT: A pathology report is a clinical report describing findings from examined tissue or samples.
+
+The recorded missing documents for claim CL-2048 are: pathology report, office note.
+
+Which part would you like me to clarify first?
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 217 | Margaret Chen | emotional
+Expected intent: next_steps
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=denial_details | secondary=['next_steps'] | requested_field=None | emotion=None | handoff=None
+USER: I am panicking about the denial. What can I do next?
+ASSISTANT: The recorded denial reason for claim CL-2048 is: the review file did not include the pathology report and the treating provider office note
+
+Next steps for claim CL-2048 are to provide any listed missing documents and contact a representative if you need to appeal or confirm submission requirements.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 218 | Margaret Chen | emotional
+Expected intent: processing_time
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=timing | secondary=['emotional_support'] | requested_field=processing_time | emotion=distressed | handoff=None
+USER: I am really upset with how long this is taking. How long is the review?
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+The available record does not include a processing-time guarantee for claim CL-2048.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 219 | Margaret Chen | emotional
+Expected intent: document_alternative
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=alternatives | secondary=['emotional_support'] | requested_field=None | emotion=distressed | handoff=None
+USER: I cannot get the original report and I am stressed. What can replace it?
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+The claim record does not confirm whether a replacement document is acceptable for claim CL-2048. A claims representative should confirm an approved alternative before submission.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 220 | Margaret Chen | emotional
+Expected intent: case_summary
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=case_summary | secondary=['emotional_support'] | requested_field=case_summary | emotion=distressed | handoff=None
+USER: I am disappointed and confused. Could you summarize what happened?
+ASSISTANT: I understand this has been stressful. We can take it one step at a time.
+
+Claim CL-2048 is recorded as denied.
+
+Recorded denial reason: the review file did not include the pathology report and the treating provider office note
+
+Recorded missing documents: pathology report, office note.
+
+Recorded appeal deadline: 2026-03-18.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=distressed | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 221 | Margaret Chen | unrelated
+Expected intent: unclear
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Before we continue, can you recommend a restaurant?
+ASSISTANT: I can only assist with insurance claim-related questions.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 222 | Margaret Chen | unrelated
+Expected intent: unclear
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: What is the weather supposed to be like tomorrow?
+ASSISTANT: I can only assist with insurance claim-related questions.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 223 | Margaret Chen | unrelated
+Expected intent: unclear
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Can you help me write an email to my landlord?
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 224 | Margaret Chen | unrelated
+Expected intent: unclear
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: I just remembered—what is a good movie to watch tonight?
+ASSISTANT: I can only assist with insurance claim-related questions.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None
+
+------------------------------------------------------------------------
+CASE 225 | Margaret Chen | unrelated
+Expected intent: unclear
+
+TURN 1 | phase=RESOLVE_INTENT | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Hi, this is Margaret Chen. My date of birth is 1985-03-15 and the last four digits of my SSN are 4472.
+ASSISTANT: Thank you. Your identity is verified. Please provide the claim ID or describe the claim you need help with.
+
+TURN 2 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: My claim number is CL-2048.
+ASSISTANT: I found and verified claim CL-2048. What would you like help with?
+
+TURN 3 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Can you translate a short paragraph for me?
+ASSISTANT: I can only assist with insurance claim-related questions.
+
+TURN 4 | phase=PROCESS_CASE | verified=True | intent=unclear | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: Yes, please continue.
+ASSISTANT: I can review the status, denial reason, documents, appeal, payment, or next steps for claim CL-2048.
+
+TURN 5 | phase=POST_PROCESS | verified=True | intent=finish | secondary=[] | requested_field=None | emotion=None | handoff=None
+USER: No, that is all.
+ASSISTANT: Would you like a summary of this claim conversation sent to your registered email address? Reply send or skip.
+
+FINAL: phase=POST_PROCESS, verified=True, case_id=CL-2048, email_choice=None, handoff=None

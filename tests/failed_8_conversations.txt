@@ -1,0 +1,119 @@
+========================================================================
+顾客 4：document_submission
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：How do I submit the missing documents?
+系统：Certainly. The documents currently listed for claim CL-2048 are: pathology report, office note.
+
+结果：阶段=PROCESS_CASE；实际意图=missing_documents；预期意图=document_submission；案件=CL-2048
+
+========================================================================
+顾客 5：requirements
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：What documents are required?
+系统：I can explain the insurance terms in your claim, but I’m not sure which term you mean. Which word or phrase would you like me to explain?
+
+结果：阶段=PROCESS_CASE；实际意图=unclear；预期意图=document_requirements；案件=CL-2048
+
+========================================================================
+顾客 12：receipt
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：Did you receive the documents I uploaded?
+系统：Of course. Use the member portal or claim upload link first when possible. Each file should be legible and complete, with claim-identifying details, relevant dates, and the issuing provider, facility, shop, or record source visible where applicable. If online upload is not available, support can help arrange fax or mail submission.
+
+结果：阶段=PROCESS_CASE；实际意图=document_submission；预期意图=receipt_confirmation；案件=CL-2048
+
+========================================================================
+顾客 13：term
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：Please explain the deductible.
+系统：I’m not quite sure I understood what you need yet.  I can help with claim status, denial reasons, missing documents, document submission, deadlines, processing times, payments, appeals, next steps, or a human claims representative.  Which area would you like to start with?
+
+结果：阶段=PROCESS_CASE；实际意图=unclear；预期意图=term_explanation；案件=CL-2048
+
+========================================================================
+顾客 14：term
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：Please explain the deductible.
+系统：I’m not quite sure I understood what you need yet.  I can help with claim status, denial reasons, missing documents, document submission, deadlines, processing times, payments, appeals, next steps, or a human claims representative.  Which area would you like to start with?
+
+结果：阶段=PROCESS_CASE；实际意图=unclear；预期意图=term_explanation；案件=CL-2048
+
+========================================================================
+顾客 33：intake_delay
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：Did you receive the documents I uploaded?
+系统：Of course. Use the member portal or claim upload link first when possible. Each file should be legible and complete, with claim-identifying details, relevant dates, and the issuing provider, facility, shop, or record source visible where applicable. If online upload is not available, support can help arrange fax or mail submission.
+
+结果：阶段=PROCESS_CASE；实际意图=document_submission；预期意图=receipt_confirmation；案件=CL-2048
+
+========================================================================
+顾客 37：deductible
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：Please explain the deductible.
+系统：I’m not quite sure I understood what you need yet.  I can help with claim status, denial reasons, missing documents, document submission, deadlines, processing times, payments, appeals, next steps, or a human claims representative.  Which area would you like to start with?
+
+结果：阶段=PROCESS_CASE；实际意图=unclear；预期意图=term_explanation；案件=CL-2048
+
+========================================================================
+顾客 44：submission_method
+========================================================================
+
+顾客（第 1 轮）：My name is Margaret Chen. My date of birth is 1985-03-15 and my SSN last four are 4472.
+系统：I found multiple claims associated with your verified identity. Please provide the claim ID you would like to discuss so I can confirm it.
+
+顾客（第 2 轮）：My claim number is CL-2048.
+系统：I found case CL-2048 and confirmed that it belongs to your verified identity. Before I access any case details, what would you like help with?
+
+顾客（第 3 轮）：How do I submit the missing documents?
+系统：Certainly. The documents currently listed for claim CL-2048 are: pathology report, office note.
+
+结果：阶段=PROCESS_CASE；实际意图=missing_documents；预期意图=document_submission；案件=CL-2048
