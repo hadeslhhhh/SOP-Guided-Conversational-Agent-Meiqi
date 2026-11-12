@@ -111,6 +111,17 @@ def _prepare_turn(data: GraphState, interpreter) -> GraphState:
     pending_fields_before = list(data["session"].pending_requested_fields)
     parsed = interpreter.interpret(data["text"], data["session"])
     data["session"].last_nlu = parsed
+    # OpenAI remains the semantic NLU, but this narrow deterministic scope
+    # guard prevents an obvious unrelated question from being mislabeled as
+    # ``unclear`` and bypassing the out-of-scope counter.
+    from .interpreter import is_obvious_out_of_scope
+    if is_obvious_out_of_scope(data["text"]):
+        parsed.intent = "out_of_scope"
+        parsed.raw_intent = "out_of_scope"
+        parsed.unrelated = True
+        parsed.requested_fields = []
+        parsed.requested_field = []
+        parsed.secondary_intents = []
     session = data["session"]
     # Acknowledgements are conversation acts, not new claim questions. Keep
     # the completed field ledger intact even if the model happens to classify

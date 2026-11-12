@@ -17,7 +17,7 @@ def main():
         raise SystemExit("OPENAI_API_KEY is required; refusing to run without API")
     if os.getenv("NLU_MODE", "openai").lower() != "openai":
         raise SystemExit("Set NLU_MODE=openai; local fallback is not allowed")
-    # Import only the canonical implementation under sop_agent_update/.
+    # Import only the canonical implementation in this project directory.
     sys.path.insert(0, str(CANONICAL))
     from app.workflow import ConversationService
     from app.models import Session

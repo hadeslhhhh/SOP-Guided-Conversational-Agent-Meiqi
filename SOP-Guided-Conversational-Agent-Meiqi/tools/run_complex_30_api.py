@@ -8,6 +8,8 @@ import argparse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from app.interpreter import normalize_requested_fields
 SOURCE = ROOT / "tests" / "complex_30_customer_conversions.txt"
 OUTPUT = ROOT / "tests" / "complex_30_api_conversion_results.txt"
 JSONL_SOURCE = ROOT.parent / "tests" / "generated_sop_harness_30_customers.jsonl"
@@ -142,7 +144,9 @@ def assertions(row, state, trace=None, error=None):
     if compound_turns:
         missing = []
         for item in compound_turns:
-            missing.extend(set(item["requested_fields"]) - set(item.get("answered_fields", [])))
+            requested = set(normalize_requested_fields(item.get("requested_fields", [])))
+            answered = set(normalize_requested_fields(item.get("answered_fields", [])))
+            missing.extend(requested - answered)
         add("all_requested_fields_answered", not missing,
             "Every requested field was answered and marked answered."
             if not missing else "Missing answers for: " + ", ".join(sorted(set(missing))))
@@ -295,7 +299,7 @@ def main():
                 "verification_status": state.verification_status,
                 "raw_intent": parsed.raw_intent if parsed else None,
                 "intent": parsed.intent if parsed else None,
-                "requested_fields": parsed.requested_fields if parsed else [],
+                "requested_fields": normalize_requested_fields(parsed.requested_fields if parsed else []),
                 "answered_fields": list(state.answered_fields),
                 "pending_requested_fields": list(state.pending_requested_fields),
                 "workflow_action": parsed.workflow_action if parsed else None,

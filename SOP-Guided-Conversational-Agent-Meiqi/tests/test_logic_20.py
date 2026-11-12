@@ -1,6 +1,8 @@
 """Twenty API-independent logic samples for development and CI."""
 
-from app.interpreter import canonical_requested_field, consent_of, requested_fields_from_text
+from app.interpreter import (canonical_requested_field, consent_of,
+                             is_obvious_out_of_scope,
+                             normalize_requested_fields, requested_fields_from_text)
 from app.models import Parsed, Session
 from app.response_service import ResponseService
 
@@ -146,3 +148,11 @@ def test_23_documents_alias_maps_to_canonical_missing_documents():
 def test_24_case_type_values_are_not_intent_labels():
     allowed_case_types = {"healthcare", "dental", "auto"}
     assert "other_claim_inquiry" not in allowed_case_types
+
+
+def test_25_invalid_placeholder_requested_field_is_dropped():
+    assert normalize_requested_fields(["none", "appeal_deadline"]) == ["appeal_deadline"]
+
+
+def test_26_obvious_out_of_scope_request_is_detected():
+    assert is_obvious_out_of_scope("Can you recommend a movie?") is True

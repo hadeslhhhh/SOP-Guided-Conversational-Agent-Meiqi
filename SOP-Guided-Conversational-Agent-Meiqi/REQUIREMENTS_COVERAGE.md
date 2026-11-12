@@ -99,7 +99,7 @@ Then open <http://localhost:8000> and exercise identity verification, remembered
 Run the API-only regression set:
 
 ```bash
-python sop_agent_update/tools/run_api_regression_15.py
+python tools/run_api_regression_15.py
 ```
 
 ## 10. Current demo limitations

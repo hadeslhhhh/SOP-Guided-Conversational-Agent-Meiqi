@@ -90,9 +90,9 @@ Main responsibilities:
 
 Relevant code:
 
-- `sop_agent_update/app/stages/verify_identity.py`
-- `sop_agent_update/app/identity_guard.py`
-- `sop_agent_update/app/repository.py`
+- `app/stages/verify_identity.py`
+- `app/identity_guard.py`
+- `app/repository.py`
 
 ### 2. `RESOLVE_INTENT`
 
@@ -109,9 +109,9 @@ Main responsibilities:
 
 Relevant code:
 
-- `sop_agent_update/app/stages/resolve_intent.py`
-- `sop_agent_update/app/interpreter.py`
-- `sop_agent_update/app/repository.py`
+- `app/stages/resolve_intent.py`
+- `app/interpreter.py`
+- `app/repository.py`
 
 ### 3. `PROCESS_CASE`
 
@@ -130,10 +130,10 @@ Main responsibilities:
 
 Relevant code:
 
-- `sop_agent_update/app/stages/process_case.py`
-- `sop_agent_update/app/response_service.py`
-- `sop_agent_update/app/guards_runtime.py`
-- `sop_agent_update/app/factual_guard.py`
+- `app/stages/process_case.py`
+- `app/response_service.py`
+- `app/guards_runtime.py`
+- `app/factual_guard.py`
 
 ### 4. `POST_PROCESS`
 
@@ -151,8 +151,8 @@ Main responsibilities:
 
 Relevant code:
 
-- `sop_agent_update/app/stages/post_process.py`
-- `sop_agent_update/app/store.py`
+- `app/stages/post_process.py`
+- `app/store.py`
 
 ## Emotional Support and SOP recovery
 

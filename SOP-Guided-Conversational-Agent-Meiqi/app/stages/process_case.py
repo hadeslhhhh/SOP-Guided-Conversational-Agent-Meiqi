@@ -114,7 +114,8 @@ def run(state, text, interpreter, repository, parsed=None):
     claim_id_only = bool(re.fullmatch(r"\s*CL[- ]?\d+\s*", text, re.I))
     from ..interpreter import requested_fields_from_text
     explicit_fields = requested_fields_from_text(text, parsed.intent)
-    requested_fields = list(dict.fromkeys(parsed.requested_fields or parsed.requested_field))
+    from ..interpreter import normalize_requested_fields
+    requested_fields = normalize_requested_fields(parsed.requested_fields or parsed.requested_field)
     if claim_id_only or (state.pending_requested_fields and not explicit_fields):
         requested_fields = list(state.pending_requested_fields)
     elif explicit_fields:

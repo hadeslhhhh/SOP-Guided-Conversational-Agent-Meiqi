@@ -64,6 +64,21 @@ def canonical_requested_field(value):
     return REQUESTED_FIELD_ALIASES.get(key)
 
 
+def normalize_requested_fields(values):
+    """Return only supported, canonical field names from model output.
+
+    The structured model sometimes emits placeholder values such as ``none``
+    when it has identified an intent but no field. Those placeholders are not
+    answerable business fields and must never enter the session contract.
+    """
+    normalized = []
+    for value in values or []:
+        field = canonical_requested_field(value)
+        if field and field not in normalized:
+            normalized.append(field)
+    return normalized
+
+
 def canonical_intent(value):
     if not isinstance(value, str):
         return value
@@ -138,6 +153,22 @@ def requested_fields_from_text(text, intent=None):
 def requested_field(text, intent=None):
     fields = requested_fields_from_text(text, intent)
     return fields[0] if fields else None
+
+
+def is_obvious_out_of_scope(text):
+    """Detect a small set of unambiguous non-insurance requests.
+
+    This is a scope guard, not a replacement for OpenAI NLU. It protects the
+    workflow when the provider labels an obviously unrelated turn as
+    ``unclear`` or ``unsupported_intent``.
+    """
+    return bool(re.search(
+        r"\b(?:capital of france|recommend (?:a )?movie|tell me (?:a )?joke|"
+        r"what is reinforcement learning|what is rl|quantum mechanics|"
+        r"python tutorial|write code|weather forecast|sports scores?)\b",
+        str(text or ""),
+        re.I,
+    ))
 
 
 def dialogue_act(text):
@@ -697,7 +728,7 @@ class OpenAIStructuredInterpreter:
                 if parsed.intent == "human_transfer":
                     parsed.intent = "unclear"
                     parsed.raw_intent = "verify_identity" if parsed.identity else "unclear"
-            parsed.requested_fields = [canonical_requested_field(item) for item in parsed.requested_fields]
+            parsed.requested_fields = normalize_requested_fields(parsed.requested_fields)
             # Identity evidence is never a business request.  Some API
             # responses echo fields such as dob/email/id_last4 in
             # requested_fields; carrying those into workflow state creates
@@ -707,11 +738,11 @@ class OpenAIStructuredInterpreter:
                 item for item in parsed.requested_fields
                 if item and item not in identity_fields
             ]
-            parsed.requested_field = [canonical_requested_field(item) or item for item in parsed.requested_field]
+            parsed.requested_field = normalize_requested_fields(parsed.requested_field)
             parsed.requested_field = [item for item in parsed.requested_field if item not in identity_fields]
-            for item in parsed.requested_field:
-                if item not in parsed.requested_fields:
-                    parsed.requested_fields.append(item)
+            parsed.requested_fields = normalize_requested_fields(
+                [*parsed.requested_fields, *parsed.requested_field]
+            )
             if consent_kind:
                 # Summary consent is a workflow action, not a business field
                 # request. In particular, the word "email" must not create

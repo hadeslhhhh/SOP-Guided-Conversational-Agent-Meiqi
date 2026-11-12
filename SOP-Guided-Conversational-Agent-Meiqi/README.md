@@ -1,5 +1,7 @@
 # Insurance Claims SOP Agent
 
+GitHub repository: [hadeslhhhh/SOP-Guided-Conversational-Agent-Meiqi](https://github.com/hadeslhhhh/SOP-Guided-Conversational-Agent-Meiqi)
+
 The implementation uses Python/LangGraph for identity verification, intent routing, claim authorization, email consent, and human handoff. OpenAI handles semantic understanding and final customer-facing response generation within these safety boundaries.
 
 ## Current workflow
@@ -8,20 +10,20 @@ The implementation uses Python/LangGraph for identity verification, intent routi
 VERIFY_ID → RESOLVE_INTENT → PROCESS_CASE → POST_PROCESS → COMPLETE
 ```
 
-The production entry point is `sop_agent_update/`. Root-level Python files are legacy compatibility code and are not used by the Docker image. The reference project `insurance-claims-sop-agent-main 2` supports rule mode and multiple LLM providers; this version adds stricter phase gates, SQLite session checkpoints, claim grounding, and an API-only runtime.
+This directory is the complete production project. The reference project `insurance-claims-sop-agent-main 2` supports rule mode and multiple LLM providers; this version adds stricter phase gates, SQLite session checkpoints, claim grounding, and an API-only runtime.
 
 ## Requirements
 
-- Docker Desktop, or Python 3.12+
+- Docker Desktop, or Python 3.11+
 - `OPENAI_API_KEY` for the API-only runtime
 
-The production image installs only the direct runtime dependencies listed in `sop_agent_update/requirements.txt`. The optional progress-bar dependency for API regression is isolated in `sop_agent_update/requirements-api-regression.txt`; pytest and local NLU packages are not installed for production.
+The production image installs only the direct runtime dependencies listed in `requirements.txt`. The optional progress-bar dependency for API regression is isolated in `requirements-api-regression.txt`; pytest and local NLU packages are not installed for production.
 
 For code-logic tests only, install the development dependencies:
 
 ```bash
-pip install -r sop_agent_update/requirements-dev.txt
-pytest -q sop_agent_update/tests/test_logic_20.py
+pip install -r requirements-dev.txt
+pytest -q tests/test_logic_20.py
 ```
 
 These logic tests do not call OpenAI and do not represent the API-only end-to-end regression suite.
@@ -80,12 +82,12 @@ The server can be started locally for development, but it still uses OpenAI APIs
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r sop_agent_update/requirements.txt
+pip install -r requirements.txt
 export OPENAI_API_KEY="your API key"
 export OPENAI_MODEL="gpt-4o-mini"
 export NLU_MODE="openai"
 export SESSION_DB="$(pwd)/sessions/sessions.sqlite3"
-uvicorn app.main:app --app-dir sop_agent_update --host 127.0.0.1 --port 8000
+uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
 ## API-only response pipeline
@@ -109,18 +111,18 @@ The project has two separate test layers.
 
 ### 1. Local pytest logic tests
 
-These 23 tests validate deterministic code logic only. They do not call OpenAI, do not require an API key, and do not run the production NLU path.
+These 26 tests validate deterministic code logic only. They do not call OpenAI, do not require an API key, and do not run the production NLU path.
 
 Install development dependencies:
 
 ```bash
-pip install -r sop_agent_update/requirements-dev.txt
+pip install -r requirements-dev.txt
 ```
 
-Run the 23 tests:
+Run the 26 tests:
 
 ```bash
-pytest -q sop_agent_update/tests/test_logic_20.py
+pytest -q tests/test_logic_20.py
 ```
 
 They cover response composition, requested-field extraction, field alias canonicalization, field tracking, consent classification, claim ID redaction, and unverified-state behavior.
@@ -132,11 +134,11 @@ These 15 cases call OpenAI for both Structured NLU and final response generation
 ```bash
 export OPENAI_API_KEY="your API key"
 export NLU_MODE=openai
-pip install -r sop_agent_update/requirements-api-regression.txt
-python sop_agent_update/tools/run_api_regression_15.py
+pip install -r requirements-api-regression.txt
+python tools/run_api_regression_15.py
 ```
 
-The script shows a live progress bar and writes the full conversation report to `sop_agent_update/tests/api_regression_15_results.txt`.
+The script shows a live progress bar and writes the full conversation report to `tests/api_regression_15_results.txt`.
 
 The API regression flow is:
 
@@ -180,14 +182,13 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the system architecture, end-to-end r
 See [REQUIREMENTS_COVERAGE.md](REQUIREMENTS_COVERAGE.md) for a requirement-by-requirement implementation and delivery assessment.
 
 ```text
-sop_agent_update/
-  app/                 FastAPI, LangGraph workflow, guards, and store
+SOP-Guided-Conversational-Agent-Meiqi/
+  app/                 FastAPI, workflow states, guards, and SQLite store
   fixtures/            Claims, identity, document, and consent data
-  tests/               API regression inputs and reports
-  Dockerfile           Subdirectory Docker image definition
-  docker-compose.yml   Subdirectory Compose configuration
-Dockerfile             Root production image entry point
-docker-compose.yml      Root production Compose entry point
+  tests/               Deterministic tests, API inputs, and reports
+  tools/               API regression and report runners
+  Dockerfile           Docker image definition
+  docker-compose.yml   Compose configuration
 ```
 
 ## Cleanup policy
