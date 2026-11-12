@@ -163,3 +163,7 @@ def test_26_obvious_out_of_scope_request_is_detected():
 def test_27_case_type_requires_explicit_customer_wording():
     assert explicit_case_type("Please check my February claim instead.") is None
     assert explicit_case_type("Please check my February healthcare claim instead.") == "healthcare"
+
+
+def test_28_math_request_is_counted_as_out_of_scope():
+    assert is_obvious_out_of_scope("Can you help me solve a math problem?") is True

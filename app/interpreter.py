@@ -165,6 +165,7 @@ def is_obvious_out_of_scope(text):
     return bool(re.search(
         r"\b(?:capital of france|recommend (?:a )?movie|tell me (?:a )?joke|"
         r"what is reinforcement learning|what is rl|what rl is|what does rl mean|"
+        r"solve (?:a )?math problem|math problem|help me with math|"
         r"quantum mechanics|"
         r"python tutorial|write code|weather forecast|sports scores?)\b",
         str(text or ""),
