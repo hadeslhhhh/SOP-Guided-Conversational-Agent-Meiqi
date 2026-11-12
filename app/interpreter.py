@@ -172,6 +172,18 @@ def is_obvious_out_of_scope(text):
     ))
 
 
+def explicit_case_type(text):
+    """Extract a claim type only when the customer states it explicitly."""
+    value = str(text or "").casefold()
+    if re.search(r"\b(?:healthcare|medical|health)\s+(?:claim|case)\b", value):
+        return "healthcare"
+    if re.search(r"\b(?:dental|dentist)\s+(?:claim|case)\b", value):
+        return "dental"
+    if re.search(r"\b(?:auto|automobile|car|vehicle)\s+(?:claim|case)\b", value):
+        return "auto"
+    return None
+
+
 def dialogue_act(text):
     t = re.sub(r"[^a-z ]", "", text.casefold()).strip()
     if t in {"bye", "goodbye", "done", "thats all", "nothing else"}:

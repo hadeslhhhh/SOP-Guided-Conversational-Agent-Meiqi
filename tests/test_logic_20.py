@@ -1,6 +1,7 @@
 """Twenty API-independent logic samples for development and CI."""
 
 from app.interpreter import (canonical_requested_field, consent_of,
+                             explicit_case_type,
                              is_obvious_out_of_scope,
                              normalize_requested_fields, requested_fields_from_text)
 from app.models import Parsed, Session
@@ -157,3 +158,8 @@ def test_25_invalid_placeholder_requested_field_is_dropped():
 def test_26_obvious_out_of_scope_request_is_detected():
     assert is_obvious_out_of_scope("Can you recommend a movie?") is True
     assert is_obvious_out_of_scope("Can you explain what RL is?") is True
+
+
+def test_27_case_type_requires_explicit_customer_wording():
+    assert explicit_case_type("Please check my February claim instead.") is None
+    assert explicit_case_type("Please check my February healthcare claim instead.") == "healthcare"

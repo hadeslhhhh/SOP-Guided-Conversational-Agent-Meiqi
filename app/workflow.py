@@ -197,6 +197,13 @@ def _prepare_turn(data: GraphState, interpreter) -> GraphState:
         if parsed.intent == "human_transfer":
             parsed.intent = "unclear"
     deterministic_hint = trusted.hint
+    from .interpreter import explicit_case_type
+    explicit_type = explicit_case_type(data["text"])
+    if explicit_type:
+        deterministic_hint.case_type = explicit_type
+    else:
+        deterministic_hint.case_type = None
+        deterministic_hint.excluded_case_type = None
     for field in ("case_id", "case_type", "month", "year", "status", "policy_number", "excluded_case_type"):
         value = getattr(deterministic_hint, field, None)
         if value is not None:

@@ -159,8 +159,14 @@ def run(state, text, interpreter, repository, parsed=None):
         # Never carry the previous claim ID through a switch. The new claim
         # must be found from the current turn's fresh clues.
         parsed.hint.case_id = None
+        from ..interpreter import explicit_case_type
+        explicit_type = explicit_case_type(text)
         for field in ("case_type", "month", "year", "status", "policy_number", "excluded_case_type"):
             value = getattr(parsed.hint, field, None)
+            if field in {"case_type", "excluded_case_type"} and not explicit_type:
+                value = None
+            elif field == "case_type" and explicit_type:
+                value = explicit_type
             if value is not None:
                 setattr(state.hint, field, value)
         # The current turn's explicit month has priority over any stale hint
