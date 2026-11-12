@@ -189,6 +189,8 @@ Endpoints:
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the system architecture, end-to-end request flow, workflow phases, and feature list.
 
+See [PYTHON_FILES.md](PYTHON_FILES.md) for a file-by-file explanation of the application, workflow stages, guards, tests, and API tools.
+
 See [REQUIREMENTS_COVERAGE.md](REQUIREMENTS_COVERAGE.md) for a requirement-by-requirement implementation and delivery assessment.
 
 ```text
