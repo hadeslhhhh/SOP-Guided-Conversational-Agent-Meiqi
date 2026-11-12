@@ -1,6 +1,6 @@
 """Twenty API-independent logic samples for development and CI."""
 
-from app.interpreter import consent_of, requested_fields_from_text
+from app.interpreter import canonical_requested_field, consent_of, requested_fields_from_text
 from app.models import Parsed, Session
 from app.response_service import ResponseService
 
@@ -129,3 +129,20 @@ def test_20_unverified_state_does_not_claim_verification():
     state = Session()
     assert state.verified is False
     assert state.case_id is None
+
+
+def test_21_status_alias_maps_to_canonical_claim_status():
+    assert canonical_requested_field("status") == "claim_status"
+
+
+def test_22_payment_alias_maps_to_canonical_payment_amount():
+    assert canonical_requested_field("payment") == "payment_amount"
+
+
+def test_23_documents_alias_maps_to_canonical_missing_documents():
+    assert canonical_requested_field("documents") == "missing_documents"
+
+
+def test_24_case_type_values_are_not_intent_labels():
+    allowed_case_types = {"healthcare", "dental", "auto"}
+    assert "other_claim_inquiry" not in allowed_case_types

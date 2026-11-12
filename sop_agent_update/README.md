@@ -31,7 +31,7 @@ The runtime uses OpenAI Structured NLU followed by OpenAI final response generat
 
 Runtime versions are pinned in `requirements.txt`. The API regression progress bar is optional and is isolated in `requirements-api-regression.txt`.
 
-For local code-logic tests, use `requirements-dev.txt`. The 20 tests in `tests/test_logic_20.py` do not call OpenAI.
+For local code-logic tests, use `requirements-dev.txt`. The 23 tests in `tests/test_logic_20.py` do not call OpenAI.
 
 ## Persistence and email
 
@@ -41,7 +41,7 @@ Session state is persisted in SQLite through `SESSION_DB`. Email summaries use a
 
 ### Local pytest logic tests
 
-Install development dependencies and run the 20 API-independent logic tests:
+Install development dependencies and run the 23 API-independent logic tests:
 
 ```bash
 pip install -r sop_agent_update/requirements-dev.txt

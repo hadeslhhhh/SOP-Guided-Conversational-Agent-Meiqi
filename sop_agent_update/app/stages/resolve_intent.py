@@ -86,6 +86,18 @@ def run(state, text, interpreter, repository, parsed=None):
     # Out-of-scope and explicit completion turns do not require claim
     # selection. They are handled before any claim lookup or selection prompt.
     if parsed.unrelated or parsed.intent == "out_of_scope":
+        state.out_of_scope_count += 1
+        state.unresolved_intent_streak = state.out_of_scope_count
+        if state.out_of_scope_count >= 4:
+            state.escalation_required = True
+            state.escalation_reason = "repeated_out_of_scope"
+            state.escalation_offered = True
+            state.handoff_status = "offered"
+            state.handoff_reason = "The agent could not identify a claim-related request after repeated out-of-scope questions."
+            state.awaiting_handoff_confirmation = True
+            return ("I can only assist with insurance claim-related questions. "
+                    "We have not been able to identify a claim-related request after several attempts. "
+                    "Would you like me to connect you with a human representative? Reply yes or no.")
         return "I can only assist with insurance claim-related questions."
     if parsed.intent == "finish":
         state.phase = Phase.COMPLETE

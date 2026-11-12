@@ -42,13 +42,18 @@ INTENT_ALIASES = {
 }
 
 REQUESTED_FIELD_ALIASES = {
+    # The model may return broad field names while the response layer uses
+    # canonical field names. Normalize before tracking answered/pending state.
+    "status": "claim_status", "claim_status": "claim_status",
+    "payment": "payment_amount", "payment_amount": "payment_amount",
+    "documents": "missing_documents", "missing_documents": "missing_documents",
     "appeal_deadline": "appeal_deadline", "last_day_to_appeal": "appeal_deadline",
     "document_submission_deadline": "document_submission_deadline", "submission_deadline": "document_submission_deadline",
     "payment_date": "payment_date", "payment_amount": "payment_amount",
     "processing_time": "processing_time", "missing_documents": "missing_documents",
     "document_receipt_status": "document_receipt_status", "upload_receipt_status": "document_receipt_status",
     "document_submission_channel": "document_submission_channel", "submission_channels": "document_submission_channel",
-    "claim_status": "claim_status", "denial_reason": "denial_reason", "next_steps": "next_steps",
+    "denial_reason": "denial_reason", "next_steps": "next_steps",
 }
 
 
@@ -513,6 +518,7 @@ class OpenAIStructuredInterpreter:
                     "emotion_type as exactly one of neutral, worried, anxious, frustrated, angry, sad, distressed, or confused; "
                     "emotion_level as exactly one of low, medium, or high; emotion_evidence as a list of exact customer-language "
                     "The hint object may contain case_id, case_type (healthcare, auto, or dental), month (1-12), year, status, "
+                    "case_type is only the claim category healthcare, auto, or dental; never place an intent label in case_type. "
                     "policy_number, and excluded_case_type (healthcare, auto, or dental). Preserve every explicit hint. "
                     "or conversation-behavior signals; human, unrelated, refusal, "
                     "classification_status, and workflow_action. workflow_action must be one of none, "
@@ -589,6 +595,27 @@ class OpenAIStructuredInterpreter:
                 value = payload.get(object_field)
                 if isinstance(value, dict):
                     payload[object_field] = {key: item for key, item in value.items() if item is not None}
+            # Keep semantic intent labels separate from case-type hints before
+            # Pydantic validation. A model may occasionally place a value
+            # such as "other_claim_inquiry" in hint.case_type; that is an
+            # intent, not a valid claim type, and must never crash the turn.
+            valid_case_types = {"healthcare", "dental", "auto"}
+            hint_payload = payload.get("hint")
+            if isinstance(hint_payload, dict):
+                case_type = hint_payload.get("case_type")
+                if case_type is not None:
+                    normalized_case_type = str(case_type).casefold().strip()
+                    if normalized_case_type in valid_case_types:
+                        hint_payload["case_type"] = normalized_case_type
+                    else:
+                        hint_payload.pop("case_type", None)
+                excluded_case_type = hint_payload.get("excluded_case_type")
+                if excluded_case_type is not None:
+                    normalized_excluded = str(excluded_case_type).casefold().strip()
+                    if normalized_excluded in valid_case_types:
+                        hint_payload["excluded_case_type"] = normalized_excluded
+                    else:
+                        hint_payload.pop("excluded_case_type", None)
             if payload.get("emotion_type") in (None, ""):
                 payload["emotion_type"] = "neutral"
             if not isinstance(payload.get("emotion_evidence"), list):

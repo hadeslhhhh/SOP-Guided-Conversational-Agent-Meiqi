@@ -35,6 +35,22 @@ def _turn_has(trace, predicate):
     return any(predicate(item) for item in trace)
 
 
+def _denial_answer_is_grounded(item):
+    """Validate against the selected claim, not one exact sentence template."""
+    claim = item.get("claim") or {}
+    reply = item.get("reply", "").casefold()
+    reason = str(claim.get("denial_reason") or "").casefold()
+    if not item.get("case_id") or not claim or claim.get("case_id") != item.get("case_id"):
+        return False
+    if not ("claim" in reply or "your case" in reply):
+        return False
+    denial_language = bool(re.search(r"\bdeni(?:ed|al)|rejected|not approved|turned down\b", reply))
+    reason_language = bool(re.search(r"\breason|because|incomplete|missing|insufficient|review file\b", reply))
+    reason_tokens = [token for token in re.findall(r"[a-z]+", reason) if len(token) > 4]
+    grounded_overlap = not reason_tokens or any(token in reply for token in reason_tokens)
+    return denial_language and reason_language and grounded_overlap
+
+
 def assertions(row, state, trace=None, error=None):
     trace = trace or []
     checks = []
@@ -132,8 +148,8 @@ def assertions(row, state, trace=None, error=None):
             if not missing else "Missing answers for: " + ", ".join(sorted(set(missing))))
 
     if "grounded_denial_reason" in expected or "grounded_answer" in expected:
-        ok = _turn_has(trace, lambda item: "recorded denial reason" in item["reply"].casefold()
-                       and bool(item.get("case_id")))
+        ok = _turn_has(trace, lambda item: "denial_reason" in set(item.get("requested_fields", []))
+                       and _denial_answer_is_grounded(item))
         for name in ("grounded_denial_reason", "grounded_answer"):
             if name in expected:
                 add(name, ok, "Denial response must cite the selected claim and recorded denial reason.")
@@ -177,10 +193,14 @@ def assertions(row, state, trace=None, error=None):
     if "reject_out_of_scope" in expected or "count_repeated_irrelevant_attempts" in expected:
         outscope_turns = [item for item in trace if item["is_out_of_scope"]]
         if "reject_out_of_scope" in expected:
-            add("reject_out_of_scope", bool(outscope_turns), "At least one unrelated turn must receive an out-of-scope response.")
+            ok = bool(outscope_turns) and all(
+                "insurance claim" in item["reply"].casefold() for item in outscope_turns
+            )
+            add("reject_out_of_scope", ok, "Every unrelated turn must receive a polite insurance-scope refusal.")
         if "count_repeated_irrelevant_attempts" in expected:
-            add("count_repeated_irrelevant_attempts", len(outscope_turns) >= 3,
-                f"Observed out-of-scope turns={len(outscope_turns)}; expected at least 3.")
+            observed_count = max([item.get("out_of_scope_count", 0) for item in trace] or [0])
+            add("count_repeated_irrelevant_attempts", observed_count >= 3,
+                f"Observed out-of-scope turns={len(outscope_turns)}; session counter={observed_count}; expected at least 3.")
     if "email_not_sent_after_decline" in expected or "email_not_sent" in expected or "email_sent_only_after_yes" in expected:
         no_dispatch = state.email_dispatch_status != "sent" and state.pending_email_body is None
         if "email_not_sent_after_decline" in expected:
@@ -232,7 +252,8 @@ def main():
     cases = cases[:args.limit]
     output = (ROOT.parent / "tests" / "generated_sop_harness_30_conversion.txt" if args.source == "sop-jsonl" else OUTPUT)
     service = ConversationService()
-    report = ["COMPLEX 30 API-ONLY CONVERSION RESULTS", "=" * 42, ""]
+    conversation_report = ["COMPLEX 30 API-ONLY CONVERSATIONS", "=" * 42, ""]
+    diagnostics_report = ["INTERMEDIATE STATE, NLU, AND ASSERTION DETAILS", "=" * 42, ""]
     total = len(cases)
     print(f"API mode: OpenAI Structured NLU | cases: {total}", flush=True)
     for index, item in enumerate(cases, 1):
@@ -245,7 +266,8 @@ def main():
         sid = str(uuid.uuid4())
         state = Session()
         trace = []
-        report.extend([f"{case_id} | {customer} | {kind}", f"EXPECTED_CHECKS: {row.get('expected_checks', [])}", "-"])
+        conversation_report.extend([f"{case_id} | {customer} | {kind}", "-"])
+        diagnostics_report.extend([f"{case_id} | {customer} | {kind}", f"EXPECTED_CHECKS: {row.get('expected_checks', [])}", "-"])
         run_error = None
         for turn_no, text in enumerate(turns, 1):
             print(f"  turn {turn_no}/{len(turns)} API call...", flush=True)
@@ -256,7 +278,8 @@ def main():
                 failure = f"{type(exc).__name__}: {str(exc)[:500]}"
                 run_error = failure
                 print(f"  FAILED turn {turn_no}: node=PREPARE_TURN phase={phase} error={failure}", flush=True)
-                report.extend([f"USER: {text}", f"FAILURE: node=PREPARE_TURN; phase={phase}; error={failure}", ""])
+                conversation_report.extend([f"USER: {text}", f"BOT: [API FAILURE: {failure}]", ""])
+                diagnostics_report.extend([f"{case_id} TURN {turn_no} FAILURE: node=PREPARE_TURN; phase={phase}; error={failure}", ""])
                 break
             parsed = state.last_nlu
             trace.append({
@@ -265,6 +288,8 @@ def main():
                 "phase": state.phase.value,
                 "verified": state.verified,
                 "case_id": state.case_id,
+                "claim": service.repo.authorized_claim(state) or {},
+                "out_of_scope_count": state.out_of_scope_count,
                 "identity": dict(state.identity),
                 "case_hints": state.hint.model_dump(exclude_none=True),
                 "verification_status": state.verification_status,
@@ -282,11 +307,14 @@ def main():
                 "is_identity_only": bool(parsed and parsed.identity and not parsed.requested_fields),
                 "claim_selection_prompt": bool(re.search(r"(?:choose|select|provide).*(?:claim|case)", reply, re.I)),
             })
-            report.extend([
+            conversation_report.extend([
                 f"USER: {text}",
                 f"BOT: {reply}",
-                f"GROUND_TRUTH: {json.dumps(next((item for item in (row.get('ground_truth') or row.get('turn_ground_truth') or []) if item.get('turn') == turn_no), None), ensure_ascii=False)}",
-                f"ACTUAL: {json.dumps({key: trace[-1].get(key) for key in ('raw_intent', 'intent', 'workflow_action', 'requested_fields', 'phase', 'verified', 'case_id', 'email_consent', 'email_choice', 'handoff_status')}, ensure_ascii=False)}",
+                "",
+            ])
+            diagnostics_report.extend([
+                f"TURN {turn_no} GROUND_TRUTH: {json.dumps(next((item for item in (row.get('ground_truth') or row.get('turn_ground_truth') or []) if item.get('turn') == turn_no), None), ensure_ascii=False)}",
+                f"TURN {turn_no} ACTUAL: {json.dumps({key: trace[-1].get(key) for key in ('raw_intent', 'intent', 'workflow_action', 'requested_fields', 'phase', 'verified', 'case_id', 'email_consent', 'email_choice', 'handoff_status', 'out_of_scope_count')}, ensure_ascii=False)}",
                 f"STATE: phase={state.phase.value}; raw_intent={parsed.raw_intent if parsed else None}; "
                 f"intent={parsed.intent if parsed else None}; "
                 f"requested_fields={parsed.requested_fields if parsed else []}; "
@@ -310,8 +338,8 @@ def main():
             result = "OBSERVED"
         else:
             result = "PASS"
-        report.append("ASSERTIONS: " + json.dumps({"result": result, "checks": checks}, ensure_ascii=False))
-        report.append(
+        diagnostics_report.append("ASSERTIONS: " + json.dumps({"result": result, "checks": checks}, ensure_ascii=False))
+        diagnostics_report.append(
             "CONVERSION: " + json.dumps({
                 "case_id": state.case_id,
                 "phase": state.phase.value,
@@ -322,13 +350,13 @@ def main():
                 "turn_trace": trace,
             }, ensure_ascii=False)
         )
-        report.append("")
+        diagnostics_report.append("")
         print(f"  completed {index}/{total} | result={result} | active_claim={state.case_id} | "
               f"verified={state.verified} fields={state.matched_identity_field_count} | "
               f"hints={state.hint.model_dump(exclude_none=True)} | email={state.email_consent.value}/{state.email_dispatch_status} | "
               f"handoff={state.handoff_status}/{state.handoff_ticket or '-'} | "
               f"ticket_number={state.handoff_ticket or '-'}", flush=True)
-    output.write_text("\n".join(report) + "\n")
+    output.write_text("\n".join(conversation_report + ["", "", *diagnostics_report]) + "\n")
     print(f"DONE: wrote {output}", flush=True)
 
 

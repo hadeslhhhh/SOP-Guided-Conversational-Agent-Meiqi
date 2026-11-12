@@ -82,7 +82,12 @@ def _sync_turn_contract(session: Session, parsed: Parsed | None) -> None:
     if parsed.intent not in (None, "unclear"):
         session.current_intent = parsed.intent
         session.original_intent = session.original_intent or parsed.intent
-    fields = list(dict.fromkeys(parsed.requested_fields or parsed.requested_field or []))
+    from .interpreter import canonical_requested_field
+    fields = list(dict.fromkeys(
+        canonical_requested_field(field)
+        for field in (parsed.requested_fields or parsed.requested_field or [])
+        if canonical_requested_field(field)
+    ))
     if fields:
         session.requested_fields = fields
         session.pending_requested_fields = list(fields)
@@ -233,7 +238,12 @@ def _prepare_turn(data: GraphState, interpreter) -> GraphState:
     # supplements the API result in API-only mode so compound questions are
     # never reduced to a single primary intent.
     explicit_fields = requested_fields_from_text(data["text"], None)
-    fields = list(dict.fromkeys(parsed.requested_fields or parsed.requested_field))
+    from .interpreter import canonical_requested_field
+    fields = list(dict.fromkeys(
+        canonical_requested_field(field)
+        for field in (parsed.requested_fields or parsed.requested_field)
+        if canonical_requested_field(field)
+    ))
     for field in explicit_fields:
         if field not in fields:
             fields.append(field)

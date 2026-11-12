@@ -24,7 +24,7 @@ pip install -r sop_agent_update/requirements-dev.txt
 pytest -q sop_agent_update/tests/test_logic_20.py
 ```
 
-These 20 tests do not call OpenAI and do not represent the API-only end-to-end regression suite.
+These logic tests do not call OpenAI and do not represent the API-only end-to-end regression suite.
 
 Pinned runtime versions:
 
@@ -109,7 +109,7 @@ The project has two separate test layers.
 
 ### 1. Local pytest logic tests
 
-These 20 tests validate deterministic code logic only. They do not call OpenAI, do not require an API key, and do not run the production NLU path.
+These 23 tests validate deterministic code logic only. They do not call OpenAI, do not require an API key, and do not run the production NLU path.
 
 Install development dependencies:
 
@@ -117,13 +117,13 @@ Install development dependencies:
 pip install -r sop_agent_update/requirements-dev.txt
 ```
 
-Run the 20 tests:
+Run the 23 tests:
 
 ```bash
 pytest -q sop_agent_update/tests/test_logic_20.py
 ```
 
-They cover response composition, requested-field extraction, field tracking, consent classification, claim ID redaction, and unverified-state behavior.
+They cover response composition, requested-field extraction, field alias canonicalization, field tracking, consent classification, claim ID redaction, and unverified-state behavior.
 
 ### 2. API-only end-to-end regression
 
