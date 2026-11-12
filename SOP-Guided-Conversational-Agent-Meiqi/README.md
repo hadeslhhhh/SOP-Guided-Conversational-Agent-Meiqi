@@ -151,6 +151,16 @@ Customer message
   → Customer response
 ```
 
+### 3. Complicated and edge API suite
+
+The project also includes a 30-case API-only suite covering 15 complicated business cases, 10 emotional-recovery cases, and 5 edge/out-of-scope cases. It validates verification gates, claim switching, compound requests, grounding, emotional support, scope refusal, `out_of_scope_count`, and human escalation.
+
+```bash
+python tools/run_complex_30_api.py --limit 30
+```
+
+See [API_TESTING.md](API_TESTING.md) for the case groups, acceptance criteria, debugging commands, and output files.
+
 ## API example
 
 ```bash
